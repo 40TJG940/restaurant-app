@@ -28,7 +28,14 @@ const getDishesbyCategory = (category: string) => {
         return {
           fields: {
             ...data,
-            slug: data.slug || file.replace('.md', '')
+            slug: data.slug || file.replace('.md', ''),
+            title: data.title || 'Plat sans nom',
+            category: data.category || 'autres',
+            price: data.price || 0,
+            image: data.image || '',
+            description: data.description || '',
+            ingredients: data.ingredients || [],
+            featured: data.featured || false
           },
           content
         }

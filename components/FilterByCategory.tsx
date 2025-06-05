@@ -5,15 +5,16 @@ import DishItem from './DishItem'
 
 interface Dish {
   fields: {
-    title: string
-    slug: string
-    category: string
-    price: number
-    image: string
-    description: string
-    ingredients: string[]
+    title?: string
+    slug?: string
+    category?: string
+    price?: number
+    image?: string
+    description?: string
+    ingredients?: string[]
     featured?: boolean
   }
+  content?: string
 }
 
 interface FilterByCategoryProps {
