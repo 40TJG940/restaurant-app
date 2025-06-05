@@ -1,19 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  allowedDevOrigins: ['eat.com'],
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: 'picsum.photos',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dummyjson.com',
       },
       {
         protocol: 'https',
         hostname: 'cdn.dummyjson.com',
-        port: '',
-        pathname: '/recipe-images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;
