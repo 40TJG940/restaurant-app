@@ -26,17 +26,21 @@ export default function FilterByCategory({ dishes }: FilterByCategoryProps) {
 
   // Extract unique categories
   const categories = useMemo(() => {
-    const uniqueCategories = Array.from(new Set(dishes.map(dish => dish.fields.category)))
+    const uniqueCategories = Array.from(new Set(
+      dishes
+        .map(dish => dish.fields.category)
+        .filter(cat => cat !== undefined)
+    ))
     return [
       { key: 'all', label: 'Tous les plats', emoji: '🍽️' },
       { key: 'salads', label: 'Salades', emoji: '🥗' },
       { key: 'mains', label: 'Plats chauds', emoji: '🍖' },
       { key: 'bowls', label: 'Bowls', emoji: '🥙' },
       ...uniqueCategories
-        .filter(cat => !['salads', 'mains', 'bowls'].includes(cat))
+        .filter(cat => !['salads', 'mains', 'bowls'].includes(cat!))
         .map(cat => ({ 
-          key: cat, 
-          label: cat.charAt(0).toUpperCase() + cat.slice(1), 
+          key: cat!, 
+          label: cat!.charAt(0).toUpperCase() + cat!.slice(1), 
           emoji: '🍴' 
         }))
     ]
