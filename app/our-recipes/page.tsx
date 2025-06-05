@@ -3,8 +3,25 @@
 import { useState, useMemo, useEffect } from 'react'
 import LatestRecipe from '@/components/LatestRecipe'
 
+interface Recipe {
+  id: number
+  name: string
+  image: string
+  ingredients: string[]
+  instructions: string[]
+  prepTimeMinutes: number
+  cookTimeMinutes: number
+  servings: number
+  difficulty: string
+  cuisine: string
+  caloriesPerServing: number
+  tags: string[]
+  rating: number
+  reviewCount: number
+}
+
 // Fonction pour récupérer les recettes (équivalent de getStaticProps)
-async function getRecipes() {
+async function getRecipes(): Promise<Recipe[]> {
   try {
     const response = await fetch('https://dummyjson.com/recipes?limit=20&skip=0')
     
@@ -21,7 +38,7 @@ async function getRecipes() {
 }
 
 export default function OurRecipesPage() {
-  const [recipes, setRecipes] = useState([])
+  const [recipes, setRecipes] = useState<Recipe[]>([])
   const [loading, setLoading] = useState(true)
   const [selectedFilter, setSelectedFilter] = useState('Toutes')
 
@@ -126,7 +143,7 @@ export default function OurRecipesPage() {
         {/* Recipes Grid */}
         {filteredRecipes.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up">
-            {filteredRecipes.map((recipe: any, index: number) => (
+            {filteredRecipes.map((recipe: Recipe, index: number) => (
               <div
                 key={recipe.id}
                 className="animate-fade-in"
