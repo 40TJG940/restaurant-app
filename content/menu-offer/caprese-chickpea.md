@@ -1,19 +1,14 @@
 ---
-title: Caprese Chickpea Panzanella Salad
-slug: caprese-chickpea-panzanella-salad
-category: salads
-ingredients:
-  - Chickpeas
-  - Cherry Tomatoes
-  - Mozzarella Cheese
-  - Basil
-  - Croutons
-  - Balsamic Glaze
-calories: 300
-image_cover : "./img/no-image.png"
-imageSrc : "no-image.png"
+title: "Caprese Chickpea Panzanella Salad"
+slug: "caprese-chickpea-panzanella-salad"
+category: "salads"
+price: 13.50
+image: "/images/no-image.png"
+ingredients: ["Chickpeas", "Cherry Tomatoes", "Mozzarella Cheese", "Basil", "Croutons", "Balsamic Glaze"]
+description: "Classic Caprese flavors with chickpeas and croutons"
+featured: true
 ---
 
-## Miam 
+Enjoy a twist on the classic with the Caprese Chickpea Panzanella Salad. Bursting with chickpeas, cherry tomatoes, mozzarella cheese, basil, croutons, and a drizzle of balsamic glaze.
 
-Enjoy a twist on the classic with the Caprese Chickpea Panzanella Salad. Bursting with chickpeas, cherry tomatoes, mozzarella cheese, basil, croutons, and a drizzle of balsamic glaze, this flavorful salad is a delight at 300 calories.
+---

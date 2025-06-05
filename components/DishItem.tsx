@@ -34,9 +34,12 @@ export default function DishItem({
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-            <span className="text-6xl">🍽️</span>
-          </div>
+          <Image
+            src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop"
+            alt={title || 'Plat'}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
         )}
         {/* Featured Badge */}
         {featured && (

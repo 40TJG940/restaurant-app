@@ -9,6 +9,8 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.dummyjson.com',
+        port: '',
+        pathname: '/recipe-images/**',
       },
     ],
   },

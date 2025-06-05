@@ -5,7 +5,11 @@ import sendOrder from '@/actions/sendOrder'
 import ListOfIngredientsPerType from '@/components/ListOfIngredientsPerType'
 
 export default function MakeYourOwnSaladPage() {
-  const [state, formAction, isPending] = useActionState(sendOrder, { orderStatus: false })
+  const [state, formAction, isPending] = useActionState(sendOrder, { 
+    orderStatus: false, 
+    error: null, 
+    order: null 
+  })
   
   // Local state for ingredient selections
   const [selectedVeggies, setSelectedVeggies] = useState<string[]>([])

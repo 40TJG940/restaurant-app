@@ -123,15 +123,12 @@ export default function NotFound() {
 
         {/* Back button */}
         <div className="mt-8">
-          <button 
-            onClick={() => window.history.back()}
-            className="btn-secondary inline-flex items-center"
-          >
+          <Link href="/" className="btn-secondary inline-flex items-center">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Retour à la page précédente
-          </button>
+            Retour à l'accueil
+          </Link>
         </div>
       </div>
     </div>
