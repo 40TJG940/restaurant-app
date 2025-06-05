@@ -9,7 +9,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-image.jpg"
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&h=800&fit=crop"
             alt="Restaurant EAT"
             fill
             className="object-cover"

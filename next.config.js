@@ -4,15 +4,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'cdn.dummyjson.com',
-        port: '',
-        pathname: '/recipe-images/**',
       },
     ],
-  },
-  experimental: {
-    // Enable static exports if needed
-    // output: 'export',
   },
 }
 

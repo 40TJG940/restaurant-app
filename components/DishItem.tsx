@@ -26,12 +26,18 @@ export default function DishItem({
     <div className={`card group overflow-hidden ${featured ? 'ring-2 ring-primary-400 ring-opacity-50' : ''}`}>
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+        {image ? (
+          <Image
+            src={image}
+            alt={title || 'Plat'}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
+            <span className="text-6xl">🍽️</span>
+          </div>
+        )}
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-3 left-3 bg-primary-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
